@@ -2,6 +2,7 @@
     <title>Individual Polar Bear Tracking</title>
     </head><body>
         <h1>Polar Bear Tagged for Tracking</h1>
+        
         <p>Bear: 
             <b>{{bear.bearID }}</b> | 
             {{bear.pTT_ID}} | 
@@ -11,6 +12,9 @@
             {{ bear.age_class}} |
             {{bear.ear_applied}}	
         </p>
+        <p><a href="{% url 'bear_edit' id=bear.id %}">Edit this bear</a> 
+            <a href="{% url 'bear_delete' id=bear.id %}">Delete this bear</a></p>
+            <p>Sightings for this bear via Radio Device</p>
         <p>Sightings via Radio Device</p>
         {% for sighting in sightings %}
    <p>Bear: 
